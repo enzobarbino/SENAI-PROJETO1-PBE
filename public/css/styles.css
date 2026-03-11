@@ -1,3 +1,7 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1,
 p {
   font-size: 50px;
@@ -9,4 +13,12 @@ body {
 
 .superior {
     color:  white;
+}
+
+#login {
+    color: aliceblue;
+}
+
+#login:hover {
+    color: black;
 }

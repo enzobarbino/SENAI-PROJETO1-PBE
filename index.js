@@ -1,5 +1,4 @@
 // importações de bibliotecas e configurações básicas
-const http = require("http");
 const express = require("express");
 const router = express.Router();
 const morgan = require("morgan");
@@ -16,7 +15,6 @@ app.use(express.static("./public"));
 
 const porta = Number(process.env.PORTA);
 
-//
 app.use("/tarefa", tarefasRoutes);
 
 app.use("/", tarefasRoutes);

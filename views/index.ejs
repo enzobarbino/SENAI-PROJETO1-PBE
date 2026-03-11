@@ -12,7 +12,7 @@
 
             <button type="button btn-primary" class="btn">
                 <h1 class="fs-3 px-3">
-                    <i class="bi bi-person-circle"></i> login
+                    <i id="login" class="bi bi-person-circle"> login </i> 
                 </h1>
             </button>
             
@@ -46,8 +46,8 @@
                 <tr>
                     <th scope="row"><input type="checkbox"></th>
                     <th scope="row"><%= indice + 1 %></th>
-                    <td><%= tarefa.dia %></td>
-                    <td><%= tarefa.horas %></td>
+                    <td><%= tarefa.data %></td>
+                    <td><%= tarefa.hora %></td>
                     <td><%= tarefa.descricao %></td>
                     <td>
 
