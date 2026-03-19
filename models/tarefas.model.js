@@ -1,13 +1,20 @@
 const db = require("../db/dbConnect");
 
 class Tarefa {
-  //Read
+    //Read
     static async readAllTarefas() {
     console.log("tarefas.model.js", "readAllTarefas()");
-    const query = "select DATE_FORMAT(data, '%d/%m/%Y') data, hora, descricao from tarefas;";
+    const query = "select * from tarefas;";
     //var dados = await db.executarQuery(query);
     return db.executarQuery(query);
   }
+    
+    static async cadastrarTarefa(tarefa) {
+      console.log("tarefas.model.js", "cadastrarTarefa()");
+      console.log("tarefa", tarefa);
+      const query = "INSERT INTO tarefas(data, hora, descricao) VALUES (?, ?, ?)";
+      return db.executarQuery(query, [dataTarefa, horaTarefa, descricaoTarefa]);
+    }
 }
 
 Tarefa.readAllTarefas();

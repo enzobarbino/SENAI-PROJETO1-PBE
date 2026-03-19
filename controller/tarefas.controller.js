@@ -1,7 +1,10 @@
 const tarefaModel = require("../models/tarefas.model");
 
 const criarTarefa = (req, res) => {
-  res.end("criarTarefas vou implementar");
+  // console.log("conteudo", req.body);
+  tarefaModel.cadastrarTarefa(req.body).then((status) => {
+    res.end(status);
+  });
 };
 
 const mostrarTarefas = (req, res) => {

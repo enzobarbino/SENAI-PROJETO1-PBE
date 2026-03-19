@@ -12,6 +12,7 @@ app.use(morgan("dev"));
 app.set("views", "./views");
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
+app.use(express.urlencoded({ extended: true})); //Configura o Express para a leitura do formulário HTML.
 
 const porta = Number(process.env.PORTA);
 
